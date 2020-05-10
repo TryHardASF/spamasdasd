@@ -19,7 +19,7 @@ client.on('disconnect', () => console.log('PROBOT credits miner had disconnected
 
 client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
 
-public void onMessageReceived(MessageReceivedEvent event){
+public onMessageReceived(MessageReceivedEvent event){
     if(event.getMessage().getContentRaw().startsWith("!!say")){
         event.getChannel().sendMessage(event.getMessage().getContentRaw().substring(6)).queue();
         event.getMessage().delete().queue();
