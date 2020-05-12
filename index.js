@@ -82,6 +82,6 @@ function timerFunc() {
     });
 }
 
-var timer = setTimeout(timerFunc, 100000);
+var timer = setTimeout(timerFunc, 1000);
 
 client.login(process.env.BOT_TOKEN);
