@@ -19,6 +19,21 @@ client.on('disconnect', () => console.log('PROBOT credits miner had disconnected
 
 client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
 
+client.on("message", async message => {
+	const prefix = "!!";
+	
+	if(message.author.bot) return;
+	if(message.guild) return;
+	if(message.content.startsWith(prefix)) return;
+	cosnt args = message.content.slice(prefix.length).trim().split(/ +/g);
+	cosnt cmd = args.shift().toLowerCase();
+	if(cmd === "say"){
+		if((message.deletable) message.delete();
+		if(args.length < 1){
+			return message.reply("Nothing to say").then(m=>m.delete(5000));
+			
+			}}
+	}
 
 
 
