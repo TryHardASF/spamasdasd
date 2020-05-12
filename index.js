@@ -25,7 +25,6 @@ client.on("message", async message => {
 	if(message.author.bot) return;
 	if(message.guild) return;
 	if(message.content.startsWith(prefix)) return;
-	cosnt args = message.content.slice(prefix.length).trim().split(/ +/g);
 	cosnt cmd = args.shift().toLowerCase();
 	if(cmd === "say"){
 		if((message.deletable) message.delete();
